@@ -28,7 +28,26 @@ class MainActivity : AppCompatActivity() {
             R.id.bu9-> cellID=9
         }
         Log.d("cellID:",cellID.toString())
-
-        buChoise.setBackgroundResource(R.color.blue)
+        PlayGame(cellID,buChoise)
     }
+
+        var player1=ArrayList<Int>()
+        var player2=ArrayList<Int>()
+        var activePlayer=1
+
+        fun PlayGame(cellID:Int,buChoise:Button){
+
+            if(activePlayer==1){
+                buChoise.text="X"
+                buChoise.setBackgroundResource(R.color.blue)
+                player1.add(cellID)
+                activePlayer=2
+            }else{
+                buChoise.text="O"
+                buChoise.setBackgroundResource(R.color.darkgreen)
+                player2.add(cellID)
+                activePlayer=1
+            }
+            buChoise.isEnabled=false
+        }
 }
