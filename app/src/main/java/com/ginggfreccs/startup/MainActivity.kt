@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -49,5 +50,84 @@ class MainActivity : AppCompatActivity() {
                 activePlayer=1
             }
             buChoise.isEnabled=false
+
+            CheckWinner()
+        }
+
+        fun CheckWinner(){
+            var winner=-1
+
+            //row 1
+            if(player1.contains(1) && player1.contains(2) && player1.contains(3)){
+                winner=1
+            }
+            if(player2.contains(1) && player2.contains(2) && player2.contains(3)){
+                winner=2
+            }
+
+            //row 2
+            if(player1.contains(4) && player1.contains(5) && player1.contains(6)){
+                winner=1
+            }
+            if(player2.contains(4) && player2.contains(5) && player2.contains(6)){
+                winner=2
+            }
+
+            //row 3
+            if(player1.contains(7) && player1.contains(8) && player1.contains(9)){
+                winner=1
+            }
+            if(player2.contains(7) && player2.contains(8) && player2.contains(9)){
+                winner=2
+            }
+
+            //col 1
+            if(player1.contains(1) && player1.contains(4) && player1.contains(7)){
+                winner=1
+            }
+            if(player2.contains(1) && player2.contains(4) && player2.contains(7)){
+                winner=2
+            }
+
+            //col 2
+            if(player1.contains(2) && player1.contains(5) && player1.contains(8)){
+                winner=1
+            }
+            if(player2.contains(2) && player2.contains(5) && player2.contains(8)){
+                winner=2
+            }
+
+            //col 3
+            if(player1.contains(3) && player1.contains(6) && player1.contains(9)){
+                winner=1
+            }
+            if(player2.contains(3) && player2.contains(6) && player2.contains(9)){
+                winner=2
+            }
+
+            //case1
+            if(player1.contains(1) && player1.contains(5) && player1.contains(9)){
+                winner=1
+            }
+            if(player2.contains(1) && player2.contains(5) && player2.contains(9)){
+                winner=2
+            }
+
+            //case2
+            if(player1.contains(3) && player1.contains(5) && player1.contains(7)){
+                winner=1
+            }
+            if(player2.contains(3) && player2.contains(5) && player2.contains(7)){
+                winner=2
+            }
+
+            if (winner!=-1){
+
+                if (winner==1){
+                    Toast.makeText(this,"Player 1 win the game",Toast.LENGTH_LONG).show()
+                }else{
+                    Toast.makeText(this,"Player 2 win the game",Toast.LENGTH_LONG).show()
+                }
+            }
         }
 }
