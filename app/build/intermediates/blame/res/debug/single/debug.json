@@ -82,5 +82,9 @@
     {
         "merged": "/home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "/home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/build/intermediates/res/merged/debug/drawable_tictac.png.flat",
+        "source": "/home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/src/main/res/drawable/tictac.png"
     }
 ]

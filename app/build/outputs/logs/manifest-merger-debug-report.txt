@@ -66,7 +66,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/ging/
 	android:roundIcon
 		ADDED from /home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from /home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/src/main/AndroidManifest.xml:7:9-40
 	android:allowBackup
 		ADDED from /home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
