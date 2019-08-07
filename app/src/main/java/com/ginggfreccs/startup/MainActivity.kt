@@ -6,6 +6,8 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         when(buChoise.id){
             R.id.bu1-> cellID=1
             R.id.bu2-> cellID=2
-            R.id.bu4-> cellID=3
+            R.id.bu3-> cellID=3
             R.id.bu4-> cellID=4
             R.id.bu5-> cellID=5
             R.id.bu6-> cellID=6
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity() {
                 buChoise.setBackgroundResource(R.color.blue)
                 player1.add(cellID)
                 activePlayer=2
+                AutoPlay()
             }else{
                 buChoise.text="O"
                 buChoise.setBackgroundResource(R.color.darkgreen)
@@ -130,4 +133,42 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+
+    fun AutoPlay(){
+
+        var emptyCells=ArrayList<Int>()
+        for ( cellID in 1..9){
+
+            if(!( player1.contains(cellID) || player2.contains(cellID))) {
+                emptyCells.add(cellID)
+            }
+        }
+
+
+        val r= Random
+        val randIndex=r.nextInt(emptyCells.size-0)+0
+        val CellID= emptyCells[randIndex]
+
+        var buSelect:Button?
+        when(CellID){
+            1-> buSelect=bu1
+            2-> buSelect=bu2
+            3-> buSelect=bu3
+            4-> buSelect=bu4
+            5-> buSelect=bu5
+            6-> buSelect=bu6
+            7-> buSelect=bu7
+            8-> buSelect=bu8
+            9-> buSelect=bu9
+            else->{
+                buSelect=bu1
+            }
+        }
+
+        PlayGame(CellID,buSelect)
+
+    }
+
+
 }

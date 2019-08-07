@@ -1,4 +1,4 @@
-#Mon Aug 05 22:53:12 WEST 2019
+#Wed Aug 07 22:11:17 WEST 2019
 base.0=/home/ging/Desktop/YoutubeDemos/TicTacToy/Local/StartUP/app/build/intermediates/dex/debug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
